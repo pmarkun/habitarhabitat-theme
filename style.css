@@ -12,3 +12,36 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+body {
+    background-color:#fff;
+}
+
+#page {
+    box-shadow: 0 0 0 0;
+}
+
+.site-header .site-title {
+    text-indent: -9000px
+}
+
+.site-header .site-logo {
+    display: block;
+    width:100px;
+    height:100px;
+    background-image: url('images/logo.png');
+}
+.site-header hgroup {
+    float:left;
+}
+.header-search {
+    float:right;
+}
+
+.category .category-sticky.post {
+    width:100%;
+}
+
+.category .post {
+    width:25%;
+    float:left;
+}
