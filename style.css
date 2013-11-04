@@ -59,15 +59,6 @@ body {
     padding-bottom:100px;
 }
 
-.site-header .nav-title {
-    font-size:1.5em;
-    font-weight: bold;
-    float:left;
-    border-bottom: 1px solid #ededed;
-    border-top: 1px solid #ededed;
-    height:48px;    
-}
-
 .site-header .header-menu {
     float:left;
 }
@@ -102,24 +93,37 @@ body {
 }
 
 .header-search input[type='text'] {
-        width:40em;
+        width:30em;
 }
 
 /* Menu Habitar */
-.site-header .nav-menu-habitar {
+.site-header .nav-title {
+    font-size:1.5em;
+    font-weight: bold;
+    float:left;
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     height:48px;    
+    margin-right:10px;
+}
+
+.site-header ul.nav-menu-habitar {
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    height:48px;
+    text-align: left;
 }
 
 .site-header .nav-menu-habitar li {
     margin:0;
-    padding:0;    
+    padding:0;
 }
 
 .site-header .nav-menu-habitar li a {
     text-transform: lowercase;
     font-weight: bold;
+    font-size:1.3em;
+    line-height:1;
 }
 
 .site-header .nav-menu-habitar li a:hover {
