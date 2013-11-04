@@ -124,6 +124,11 @@ body {
     font-weight: bold;
     font-size:1.3em;
     line-height:1;
+    color:#ccc;
+}
+
+.site-header .nav-menu-habitar li.current-menu-item a {
+    color: #93101c;
 }
 
 .site-header .nav-menu-habitar li a:hover {

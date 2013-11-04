@@ -20,17 +20,14 @@ function render_video_url( $url ) {
     }
 }
 
-function render_video_vimeo( $id ) {
-    $w = '320';
-    $h = '240';
+function render_video_vimeo( $id, $w='720', $h='480' ) {
     $html = '<iframe src="//player.vimeo.com/video/'.$id.'" width="'.$w.'" height="'.$h.'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
     printf($html);
 }
 
-function render_video_youtube( $id ) {
-    $w = '320';
-    $h = '240';
+function render_video_youtube( $id, $w='720', $h='480' ) {
     $html = '<iframe width="'.$w.'" height="'.$h.'" src="//www.youtube.com/embed/'.$id.'" frameborder="0" allowfullscreen></iframe>';
     printf($html);
 }
+
 ?>
