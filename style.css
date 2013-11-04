@@ -39,6 +39,7 @@ body {
 
 #page {
     box-shadow: 0 0 0 0;
+    margin-top:0;
 }
 
 
@@ -66,23 +67,64 @@ body {
     border-top: 1px solid #ededed;
     height:48px;    
 }
-.site-header .nav-menu {
+
+.site-header .header-menu {
     float:left;
 }
 
-.site-header .nav-menu > ul {
+.site-header .header-menu {
     height:48px;
     padding-left:15px;
+    padding-top:40px;
 }
 
+.site-header .header-menu li {
+    float:right;
+    padding:2px;
+    text-transform:uppercase;
+}
+
+.site-header .header-menu li a {
+    color:#6a6a6a;
+    text-decoration:none;
+}
+
+.site-header .header-menu li a:hover {
+    color: #93101c;
+}
 .site-header hgroup {
     float:left;
 }
 .header-search {
-    float:right;
+    padding-left:10px;
+    padding-top:40px;
+    float:left;
 }
 
+.header-search input[type='text'] {
+        width:40em;
+}
 
+/* Menu Habitar */
+.site-header .nav-menu-habitar {
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    height:48px;    
+}
+
+.site-header .nav-menu-habitar li {
+    margin:0;
+    padding:0;    
+}
+
+.site-header .nav-menu-habitar li a {
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.site-header .nav-menu-habitar li a:hover {
+    color: #93101c;
+}
 /* Category */
 .category .category-sticky.post {
     width:100%;
