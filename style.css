@@ -12,6 +12,27 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+/*-- move sidebar to the left --*/
+@media screen and (min-width: 600px) {
+    .site-content {
+        float: right;
+    }
+    .widget-area {
+        float: left;
+    }
+}
+
+/* for IE8 and IE7 ----------------*/
+.ie .site-content {
+    float: right;
+}
+.ie .widget-area {
+    float: left;
+}
+
+/* Background reset */
+
 body {
     background-color:#fff;
 }
@@ -20,6 +41,8 @@ body {
     box-shadow: 0 0 0 0;
 }
 
+
+/* Site header */
 .site-header .site-title {
     text-indent: -9000px
 }
@@ -30,6 +53,28 @@ body {
     height:100px;
     background-image: url('images/logo.png');
 }
+
+.header-wrap {
+    padding-bottom:100px;
+}
+
+.site-header .nav-title {
+    font-size:1.5em;
+    font-weight: bold;
+    float:left;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    height:48px;    
+}
+.site-header .nav-menu {
+    float:left;
+}
+
+.site-header .nav-menu > ul {
+    height:48px;
+    padding-left:15px;
+}
+
 .site-header hgroup {
     float:left;
 }
@@ -37,6 +82,8 @@ body {
     float:right;
 }
 
+
+/* Category */
 .category .category-sticky.post {
     width:100%;
 }

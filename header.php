@@ -34,15 +34,18 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<a class='site-logo' href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 class="site-title"><?php bloginfo( 'name' ); ?></h1></a>
-		</hgroup>
-		<div class="header-search"><?php get_search_form(); ?></div>
-
+		<div class="header-wrap">
+			<hgroup>
+				<a class='site-logo' href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 class="site-title"><?php bloginfo( 'name' ); ?></h1></a>
+			</hgroup>
+			<?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'header-menu' ) ); ?>
+			<div class="header-search"><?php get_search_form(); ?></div>
+		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<h1>Escolha um tema ao lado: </h1><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<h2 class='nav-title'>Escolha um tema ao lado: </h2>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>
