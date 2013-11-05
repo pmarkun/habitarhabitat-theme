@@ -28,11 +28,12 @@ get_header(); ?>
 			-->
 			<?php
 			/* Start the Loop */
+			$first = true;
 			while ( have_posts() ) : the_post();
 				//Check if has category_sticky
-				$sticky_category = get_post_meta(  get_the_ID(), 'category_sticky_post', true );
-				if ( $sticky_category ) : 
+				if ( $first ) : 
 					get_template_part( 'content', get_post_format() ); 
+					$first = false;
 				else :
 					?>	
 					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
