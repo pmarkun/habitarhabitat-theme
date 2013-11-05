@@ -12,15 +12,15 @@
 
 <?php
 
-if($post) {
+if(is_single()) {
     foreach ( get_the_category() as $category ) {
-        if ( $category->category_parent == 0 ) {
-            $cat = $category->term_id;
+        if ( $category->category_parent != 0 ) {
+            $cat = $category->category_parent;
         }
     }
 }
 
-$args = array('category' => $cat);
+$args = array('category' => $cat, 'posts_per_page' => 100);
 $posts = get_posts($args);
 ?>
 <div id="secondary" class="widget-area" role="complementary">
