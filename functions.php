@@ -3,6 +3,12 @@
 //Adicionando MenU Header
 register_nav_menu( 'header', 'Header Menu' );
 
+//Adicionando suporte a thumbs
+
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'video-small', 65, 40, true); // name, width, height, crop
+add_image_size( 'video-large', 100, 80, true); // name, width, height, crop
+
 
 //Get Video ID
 
