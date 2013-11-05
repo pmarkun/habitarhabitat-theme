@@ -131,6 +131,10 @@ body {
     color: #93101c;
 }
 
+ .site-header .nav-menu-habitar li.current-post-parent a {
+    color: #93101c;   
+ }
+ 
 .site-header .nav-menu-habitar li a:hover {
     color: #93101c;
 }
