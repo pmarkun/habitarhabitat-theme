@@ -137,6 +137,34 @@ body {
 .site-header .nav-menu-habitar li a:hover {
     color: #93101c;
 }
+
+/* Logos */
+
+.logos {
+    position:absolute;
+    top:5px;
+    right:150px;
+}
+
+.logos a {
+    display: block;
+    background-repeat: no-repeat;
+    float:left;
+    padding-right:5px;
+}
+
+.logos .sesctv {
+    background-image: url('images/sesctv_logo.png');
+    width:170px;
+    height:40px;
+}
+
+.logos .sesc {
+    background-image: url('images/sesc_logo.png');
+    width:80px;
+    height:40px;
+}
+
 /* Category */
 .post:first-child {
     width:100%;
