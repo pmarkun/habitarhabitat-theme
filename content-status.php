@@ -14,10 +14,10 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
-			<h1 class="saibamais">Saiba mais:</h1>
 			<?php if ( is_single() ) {
         		$related_posts = get_related_post_content($post->ID);
        			if ($related_posts) {
+       				echo '<h1 class="saibamais">Saiba mais:</h1>';
             		foreach ($related_posts as $r) {
 	            		?>
 	                	<div class="small-grid format-<?php echo get_post_format( $r->ID ); ?>">   
