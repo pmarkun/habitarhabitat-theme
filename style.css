@@ -169,8 +169,17 @@ aside.cat-historias div.content {
 		padding-left:10px;
 }
 
-aside.cat-historias a {
+a aside.cat-historias {
 		color: #6a6a6a;
+		text-decoration: none;
+}
+
+aside.current, aside.cat-historias:hover {
+		background-color: #6a6a6a;
+}
+
+a aside.current, a aside.cat-historias:hover {
+		color: #fff;
 }
 
 aside.cat-historias img {
