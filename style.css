@@ -143,14 +143,14 @@ body {
 .logos {
     position:absolute;
     top:5px;
-    right:150px;
+    right:170px;
 }
 
 .logos a {
     display: block;
     background-repeat: no-repeat;
     float:left;
-    padding-right:5px;
+    padding-right:20px;
 }
 
 .logos .sesctv {

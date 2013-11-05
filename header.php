@@ -41,7 +41,7 @@
 			</hgroup>
 			<?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'header-menu' ) ); ?>
 			<div class="header-search"><?php get_search_form(); ?></div>
-			<div class="logos"><a class="sesc" href="http://www.sescsp.org.br/" title="SESC"></a><a class="sesctv" href="http://www.sesctv.org.br/" title="SESCTV"></a></div>
+			<div class="logos"><a class="sesctv" href="http://www.sesctv.org.br/" title="SESCTV"></a><a class="sesc" href="http://www.sescsp.org.br/" title="SESC"></a></div>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
