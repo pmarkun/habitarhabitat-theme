@@ -128,7 +128,7 @@ function get_related_post_content($id) {
         }
     }
     if ($cat) {
-        $args = array('category__in' => array($cat), 'posts_per_page' => 100, 'depth' => 1);
+        $args = array('category__in' => array($cat), 'posts_per_page' => -1, 'depth' => 1, 'post__not_in' => array($id));
         $posts = get_posts($args);
         return $posts;
     }
