@@ -221,3 +221,9 @@ a aside.current, a aside.cat-historias:hover {
 aside.cat-historias img {
 		float:left;
 }
+
+/* Anexos */
+
+.format-link .entry-title {
+    margin-top:0px;
+}
