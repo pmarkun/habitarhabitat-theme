@@ -18,7 +18,7 @@ if(is_single() || is_category()) :
             $cat = $category->category_parent;
         }
     }
-$args = array('category' => $cat, 'posts_per_page' => 100);
+$args = array('category__in' => array($cat), 'posts_per_page' => 100, 'depth' => 1);
 $posts = get_posts($args);
 ?>
 <div id="secondary" class="widget-area" role="complementary">
