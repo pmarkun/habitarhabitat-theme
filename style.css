@@ -161,14 +161,27 @@ body {
 
 .small-grid {
     float:left;
+    text-align: center;
+    width:100px;
+    min-height:120px;
+    margin-right:20px;
+    margin-bottom:20px;
 }
 
 .small-grid img {
     border:3px solid white;
+    box-shadow: 3px 3px 2px #888;
+    width:98px;
+    height:77px;
 }
 
 .small-grid a {
     float:left;
+    width:100%;
+    color:#6a6a6a;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding-top:5px;
 }
 
 .entry-meta a {
