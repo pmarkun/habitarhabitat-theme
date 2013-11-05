@@ -35,8 +35,11 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() ); 
 					$first = false;
 				else :
-					?>	
-					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+					?>
+					<div class="small-grid format-<?php echo get_post_format( get_the_ID() ); ?>">
+						<?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+						<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</div>
 				<?php 
 				endif;
 			endwhile;

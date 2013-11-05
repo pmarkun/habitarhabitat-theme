@@ -9,7 +9,11 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'video-small', 65, 40, true); // name, width, height, crop
 add_image_size( 'video-large', 100, 80, true); // name, width, height, crop
 
-
+//Adicionando formatos
+add_action( 'after_setup_theme', 'childtheme_formats', 11 );
+function childtheme_formats(){
+    add_theme_support( 'post-formats', array( 'video', 'image', 'link' ) );
+}
 //Get Video ID
 
 function render_video_url( $url ) {
