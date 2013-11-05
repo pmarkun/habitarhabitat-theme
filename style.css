@@ -131,15 +131,27 @@ body {
     color: #93101c;
 }
 
+ .site-header .nav-menu-habitar li.current-post-parent a {
+    color: #93101c;   
+ }
+
 .site-header .nav-menu-habitar li a:hover {
     color: #93101c;
 }
 /* Category */
-.category .category-sticky.post {
+.post:first-child {
     width:100%;
 }
 
-.category .post {
+.post {
     width:25%;
     float:left;
+}
+
+/* Post */
+
+.video-placeholder {
+    width:720px;
+    height:480px;
+    background-color: #ccc;
 }

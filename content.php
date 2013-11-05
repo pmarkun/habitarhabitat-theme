@@ -32,6 +32,9 @@
 				if ( $video_url ) {
 					render_video_url($video_url);
 				}
+				else { ?>
+					<div class="video-placeholder"></div>
+				<? }
 			?>
 
 			<?php if ( is_single() ) : ?>
