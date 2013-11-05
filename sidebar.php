@@ -12,14 +12,12 @@
 
 <?php
 
-if(is_single()) {
+if(is_single() || is_category()) :
     foreach ( get_the_category() as $category ) {
         if ( $category->category_parent != 0 ) {
             $cat = $category->category_parent;
         }
     }
-}
-
 $args = array('category' => $cat, 'posts_per_page' => 100);
 $posts = get_posts($args);
 ?>
@@ -40,7 +38,8 @@ $posts = get_posts($args);
     </div>
     </aside>
     </a>
-<?php endforeach ?>
+<?php endforeach; ?>
+<?php endif; ?>
 </div><!-- #secondary -->
 
 	<?php if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
