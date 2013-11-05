@@ -24,13 +24,22 @@ $args = array('category' => $cat, 'posts_per_page' => 100);
 $posts = get_posts($args);
 ?>
 <div id="secondary" class="widget-area" role="complementary">
-<?php foreach ($posts as $post) : setup_postdata( $post ); ?>
-    <aside class="cat-historias">
+<?php foreach ($posts as $post ) : setup_postdata( $post ); ?>
+    <?php
+    if (  $wp_query->post->ID == $post->ID ) {
+        $current = 'current';
+    } else {
+        $current = '';
+    }
+?>
+    <a href="<?php echo the_permalink() ?>">
+    <aside class="cat-historias <?php echo $current ?>">
 <?php echo get_the_post_thumbnail(get_the_ID(), 'video-small') ?>
     <div class="content">
-    <a href="<?php echo the_permalink() ?>"><?php echo the_title() ?></a>
+    <?php echo the_title() ?>
     </div>
     </aside>
+    </a>
 <?php endforeach ?>
 </div><!-- #secondary -->
 
