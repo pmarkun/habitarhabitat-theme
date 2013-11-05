@@ -155,3 +155,24 @@ body {
     height:480px;
     background-color: #ccc;
 }
+
+aside.cat-historias {
+		border: 1px solid #eee;
+		border-bottom: none;
+		padding: 10px;
+		height: 40px;
+}
+
+aside.cat-historias div.content {
+		float:left;
+		width:165px;
+		padding-left:10px;
+}
+
+aside.cat-historias a {
+		color: #6a6a6a;
+}
+
+aside.cat-historias img {
+		float:left;
+}

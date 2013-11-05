@@ -26,7 +26,10 @@ $posts = get_posts($args);
 <div id="secondary" class="widget-area" role="complementary">
 <?php foreach ($posts as $post) : setup_postdata( $post ); ?>
     <aside class="cat-historias">
-<a href="<?php echo the_permalink() ?>"><?php echo the_title() ?></a>
+<?php echo get_the_post_thumbnail(get_the_ID(), 'video-small') ?>
+    <div class="content">
+    <a href="<?php echo the_permalink() ?>"><?php echo the_title() ?></a>
+    </div>
     </aside>
 <?php endforeach ?>
 </div><!-- #secondary -->
