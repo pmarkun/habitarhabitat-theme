@@ -155,6 +155,21 @@ body {
     background-color: #ccc;
 }
 
+.grid-container {
+    background-color: #ccc;
+}
+
+.small-grid {
+    float:left;
+}
+
+.small-grid img {
+    border:3px solid white;
+}
+
+.small-grid a {
+    float:left;
+}
 
 .entry-meta a {
     color: #93101c;
