@@ -233,3 +233,14 @@ aside.cat-historias img {
 .format-image .entry-title {
     margin-top:0px;
 }
+
+/* Saiba Mais */
+
+.saibamais {
+    font-size: 2.2em;
+    padding-bottom:0.6em;
+}
+
+.small-grid a {
+    line-height: 1;
+}

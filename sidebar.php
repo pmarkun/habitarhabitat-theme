@@ -13,13 +13,7 @@
 <?php
 
 if(is_single() || is_category()) :
-    foreach ( get_the_category() as $category ) {
-        if ( $category->category_parent != 0 ) {
-            $cat = $category->category_parent;
-        }
-    }
-$args = array('category__in' => array($cat), 'posts_per_page' => 100, 'depth' => 1);
-$posts = get_posts($args);
+    $posts = get_related_parent_content($post->ID);
 ?>
 <div id="secondary" class="widget-area" role="complementary">
 <?php foreach ($posts as $post ) : setup_postdata( $post ); ?>

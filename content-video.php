@@ -51,11 +51,24 @@
 		<?php endif; ?>
 
 		<footer class="entry-meta">
-			<?php the_Tags("TAGS: "); ?>
-			<?php if ( comments_open() ) : ?>
-				<div class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-				</div><!-- .comments-link -->
-			<?php endif; // comments_open() ?>
+			<?php if ( is_single() ) {
+        		$related_posts = get_related_post_content($post->ID);
+       			if ($related_posts) {
+            		foreach ($related_posts as $r) {
+	            		?>
+	                	<div class="small-grid format-<?php echo get_post_format( $r->ID ); ?>">   
+	                	<?php if ( has_post_thumbnail() ) {
+	                        echo get_the_post_thumbnail( $r->ID, 'thumbnail' );
+	                    }
+	                    else { ?>
+	                        <img src='<?php echo  get_stylesheet_directory_uri() . '/images/' . get_post_format( $r->ID ) .'.png' ?>' width="98" height="77" />
+	                    <?php } ?>
+	                    <a href="<?php echo $r->guid; ?>" rel="bookmark"><?php echo $r->post_title; ?></a>
+	                	</div>
+	                	<?php
+            		}
+   				}
+			}
+    		?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->

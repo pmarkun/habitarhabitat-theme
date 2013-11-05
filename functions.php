@@ -105,4 +105,32 @@ function wds_video_sideload_post_thumb() {
     set_post_thumbnail( $post, $thumbid );
 }
 
+
+function get_related_parent_content($id) {
+    foreach ( get_the_category($id) as $category ) {
+        if ( $category->category_parent != 0 ) {
+            $cat = $category->category_parent;
+            break;
+        }
+    }
+    if ($cat) {
+        $args = array('category__in' => array($cat), 'posts_per_page' => 100, 'depth' => 1);
+        $posts = get_posts($args);
+        return $posts;
+    }
+}
+
+function get_related_post_content($id) {
+    foreach ( get_the_category($id) as $category ) {
+        if ( $category->category_parent != 0 ) {
+            $cat = $category->term_id;
+            break;
+        }
+    }
+    if ($cat) {
+        $args = array('category__in' => array($cat), 'posts_per_page' => 100, 'depth' => 1);
+        $posts = get_posts($args);
+        return $posts;
+    }
+}
 ?>
