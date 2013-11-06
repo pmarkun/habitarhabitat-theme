@@ -26,7 +26,6 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-summary">
                     <?php the_excerpt(); ?>
-                    <a href="/projeto/" rel="bookmark">Leia mais</a>
             </div><!-- .entry-summary -->        
             </article>
     </div>
