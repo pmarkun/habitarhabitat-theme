@@ -47,11 +47,13 @@
 
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+			<?php the_tags( "TAGS: ", "," ); ?> 
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
 		<footer class="entry-meta">
 			<?php if ( is_single() ) {
+
         		$related_posts = get_related_post_content($post->ID);
        			if ($related_posts) {
             		foreach ($related_posts as $r) {
