@@ -16,28 +16,20 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-       <iframe src="//player.vimeo.com/video/78694247" width="595" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
         <?php while ( have_posts() ) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <?php if ( !is_front_page() ) : // Only display Excerpts for Search ?>
-                    <div class="entry-content">
-                        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-                    </div><!-- .entry-content -->
-                <?php endif; ?>
-            </article>
-        <?php endwhile; // end of the loop. ?>
-       
-			
+			   <iframe src="//player.vimeo.com/video/78694247" width="595" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div><!-- #content -->
 	</div><!-- #primary -->
     
     <?php if ( is_front_page() ) : // Only display Excerpts for Search ?>    
     <div id="secondary" class="widget-area" role="complementary">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-summary">
                     <?php the_excerpt(); ?>
                     <a href="<?php the_permalink(); ?>" rel="bookmark">Leia mais</a>
             </div><!-- .entry-summary -->        
+            </article>
     </div>
     <?php endif; ?>                
+     <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
