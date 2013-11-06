@@ -21,7 +21,7 @@
             		foreach ($related_posts as $r) {
 	            		?>
 	                	<div class="small-grid format-<?php echo get_post_format( $r->ID ); ?>">   
-	                	<?php if ( has_post_thumbnail() ) {
+	                	<?php if ( get_the_post_thumbnail( $r->ID, 'thumbnail' ) != "" ) {
 	                        echo get_the_post_thumbnail( $r->ID, 'thumbnail' );
 	                    }
 	                    else { ?>
