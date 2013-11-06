@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
         <?php while ( have_posts() ) : the_post(); ?>
-			   <iframe src="//player.vimeo.com/video/78694247" width="595" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			   <iframe src="//player.vimeo.com/video/78694247" width="622" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div><!-- #content -->
 	</div><!-- #primary -->
     
@@ -26,7 +26,7 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-summary">
                     <?php the_excerpt(); ?>
-                    <a href="<?php the_permalink(); ?>" rel="bookmark">Leia mais</a>
+                    <a href="/projeto/" rel="bookmark">Leia mais</a>
             </div><!-- .entry-summary -->        
             </article>
     </div>
