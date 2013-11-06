@@ -175,16 +175,6 @@ a:hover, a:active {
     height:40px;
 }
 
-/* Category */
-.post:first-child {
-    width:100%;
-}
-
-.post {
-    width:25%;
-    float:left;
-}
-
 /* Post */
 
 .video-placeholder {
