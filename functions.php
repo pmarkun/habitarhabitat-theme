@@ -34,13 +34,13 @@ function render_video_url( $url ) {
     }
 }
 
-function render_video_vimeo( $id, $w='720', $h='480' ) {
-    $html = '<iframe src="//player.vimeo.com/video/'.$id.'" width="'.$w.'" height="'.$h.'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+function render_video_vimeo( $id, $w='622', $h='350' ) {
+    $html = '<iframe src="//player.vimeo.com/video/'.$id.'?portrait=0&title=0&=badge=0&byline=0&color=93101c" width="'.$w.'" height="'.$h.'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
     printf($html);
 }
 
-function render_video_youtube( $id, $w='720', $h='480' ) {
-    $html = '<iframe width="'.$w.'" height="'.$h.'" src="//www.youtube.com/embed/'.$id.'" frameborder="0" allowfullscreen></iframe>';
+function render_video_youtube( $id, $w='622', $h='350' ) {
+    $html = '<iframe width="'.$w.'" height="'.$h.'" src="//www.youtube.com/embed/'.$id.'?controls=2&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
     printf($html);
 }
 
