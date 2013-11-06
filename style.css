@@ -98,11 +98,11 @@ a:hover, a:active {
 .header-search {
     padding-left:10px;
     padding-top:40px;
-    float:left;
+    float:right;
 }
 
 .header-search input[type='text'] {
-        width:30em;
+        width:20em;
 }
 
 /* Menu Habitar */
