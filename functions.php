@@ -69,6 +69,23 @@ function get_video_thumbnail($url) {
     return $url;
 }
 
+add_action('save_post', 'get_geolocation');
+function get_geolocation() {
+    global $post;
+
+    $address = get_post_meta($post->ID, 'address', true);
+    $address = str_replace(" ", "+", $address);
+
+    $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false");
+    $json = json_decode($json);
+
+    $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
+    $lng = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
+
+    add_post_meta( $post->ID, 'lat', $lat, true );
+    add_post_meta( $post->ID, 'lng', $lng, true );
+}
+
 // Save Featured Image If It's a youtube video
 add_action('save_post', 'wds_video_sideload_post_thumb');
 function wds_video_sideload_post_thumb() {
