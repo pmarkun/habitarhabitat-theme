@@ -15,6 +15,13 @@ get_header();
     jQuery(document).ready(function () {
     var map = L.map('map').setView([-19.352611,-43.989258], 4);
 
+    var RedIcon = L.Icon.Default.extend({
+            options: {
+                    iconUrl: 'images/marker-icon-red.png' 
+            }
+         });
+    var redIcon = new RedIcon();
+
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -23,7 +30,7 @@ get_header();
 $posts = get_posts( array('meta_key' => 'lat', 'numberposts' => -1, 'posts_per_page' => -1) );
 foreach($posts as $post) : setup_postdata($post);
 ?>
-L.marker([<?php echo get_post_meta(get_the_ID(), 'lat', true) ?>, <?php echo get_post_meta(get_the_ID(), 'lng', true) ?>]).bindPopup('<a href="<?php the_permalink() ?>"><?php echo get_the_title() ?></a>').addTo(map);
+L.marker([<?php echo get_post_meta(get_the_ID(), 'lat', true) ?>, <?php echo get_post_meta(get_the_ID(), 'lng', true) ?>], {icon: redIcon}).bindPopup('<a href="<?php the_permalink() ?>"><?php echo get_the_title() ?></a>').addTo(map);
 <?php
 endforeach;
 ?>
