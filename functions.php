@@ -72,18 +72,21 @@ function get_video_thumbnail($url) {
 add_action('save_post', 'get_geolocation');
 function get_geolocation() {
     global $post;
-
+    
     $address = get_post_meta($post->ID, 'address', true);
-    $address = str_replace(" ", "+", $address);
 
-    $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false");
-    $json = json_decode($json);
+    if(empty($address)) {
+        $address = str_replace(" ", "+", $address);
 
-    $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
-    $lng = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
+        $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false");
+        $json = json_decode($json);
 
-    add_post_meta( $post->ID, 'lat', $lat, true );
-    add_post_meta( $post->ID, 'lng', $lng, true );
+        $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
+        $lng = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
+
+        add_post_meta( $post->ID, 'lat', $lat, true );
+        add_post_meta( $post->ID, 'lng', $lng, true );
+    }
 }
 
 // Save Featured Image If It's a youtube video
