@@ -23,7 +23,7 @@ get_header();
     var map = L.map('map').setView([-19.352611,-43.989258], 4);
 
     var markers = new L.MarkerClusterGroup({
-        maxClusterRadius : 40,
+        maxClusterRadius : 20,
         showCoverageOnHover: false
     });
     var RedIcon = L.Icon.Default.extend({
