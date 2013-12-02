@@ -22,7 +22,10 @@ get_header();
     jQuery(document).ready(function () {
     var map = L.map('map').setView([-19.352611,-43.989258], 4);
 
-    var markers = new L.MarkerClusterGroup();
+    var markers = new L.MarkerClusterGroup({
+        maxClusterRadius : 40,
+        showCoverageOnHover: false;
+    });
     var RedIcon = L.Icon.Default.extend({
             options: {
                     iconUrl: '<?php echo get_stylesheet_directory_uri(); ?>/images/marker-icon-red.png' 
