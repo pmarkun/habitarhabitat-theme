@@ -75,7 +75,7 @@ function get_geolocation() {
     
     $address = get_post_meta($post->ID, 'address', true);
 
-    if(empty($address)) {
+    if(!empty($address)) {
         $address = str_replace(" ", "+", $address);
 
         $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false");
