@@ -17,7 +17,7 @@ get_header();
 
     var RedIcon = L.Icon.Default.extend({
             options: {
-                    iconUrl: 'images/marker-icon-red.png' 
+                    iconUrl: '<?php echo get_stylesheet_directory_uri(); ?>/images/marker-icon-red.png' 
             }
          });
     var redIcon = new RedIcon();
