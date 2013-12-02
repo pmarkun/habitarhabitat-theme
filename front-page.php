@@ -27,6 +27,12 @@ get_header(); ?>
             <div class="entry-summary">
                     <?php the_excerpt(); ?>
             </div><!-- .entry-summary -->        
+            <div id="mapa-banner">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>/mapa">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mapa-banner.png" />
+                    <b>Veja o mapa</b>
+                </a>
+            </div>
             </article>
     </div>
     <?php endif; ?>                
