@@ -74,7 +74,7 @@ function get_geolocation() {
     global $post;
     
     $address = get_post_meta($post->ID, 'address', true);
-
+    
     if(!empty($address)) {
         $address = str_replace(" ", "+", $address);
 
@@ -84,8 +84,8 @@ function get_geolocation() {
         $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
         $lng = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
 
-        add_post_meta( $post->ID, 'lat', $lat, true );
-        add_post_meta( $post->ID, 'lng', $lng, true );
+        update_post_meta( $post->ID, 'lat', $lat, true );
+        update_post_meta( $post->ID, 'lng', $lng, true );
     }
 }
 
