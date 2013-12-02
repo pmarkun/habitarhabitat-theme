@@ -24,7 +24,7 @@ get_header();
 
     var markers = new L.MarkerClusterGroup({
         maxClusterRadius : 40,
-        showCoverageOnHover: false;
+        showCoverageOnHover: false
     });
     var RedIcon = L.Icon.Default.extend({
             options: {
