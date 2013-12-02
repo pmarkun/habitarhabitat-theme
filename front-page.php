@@ -28,9 +28,9 @@ get_header(); ?>
                     <?php the_excerpt(); ?>
             </div><!-- .entry-summary -->        
             <div id="mapa-banner">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>/mapa">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mapa-banner.png" />
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>mapa">
                     <b>Veja o mapa</b>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mapa-banner.png" style="width:250px;border:1px solid black;margin-top:5px;" />
                 </a>
             </div>
             </article>
