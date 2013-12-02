@@ -42,8 +42,8 @@ foreach($posts as $post) : setup_postdata($post);
 <?php
 endforeach;
 ?>
-})
     map.addLayer(markers);
+});
 </script>
 <?php
 get_footer();
