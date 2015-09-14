@@ -272,3 +272,14 @@ aside.cat-historias img {
 .small-grid a {
     line-height: 1;
 }
+/* Home */
+body.home .widget-area > .widget-area{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+body.home .widget-area h1,
+body.home .widget-area h2 {
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
