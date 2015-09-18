@@ -18,6 +18,25 @@ add_action( 'after_setup_theme', 'childtheme_formats', 11 );
 function childtheme_formats(){
     add_theme_support( 'post-formats', array( 'video', 'image', 'link', 'status', 'quote' ) );
 }
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function habitar_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => __('Barra Lateral da Home'),
+        'id'            => 'home_left_sidebar',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="rounded">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'habitar_widgets_init' );
+
 //Get Video ID
 
 function render_video_url( $url ) {
